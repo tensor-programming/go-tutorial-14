@@ -1,0 +1,20 @@
+{{define "internal"}}
+{{template "header" .}}
+<div class="alert alert-info" role="alert">
+    <h1 class="alert">Welcome!</h1>
+    <hr>
+
+    <strong>Hello User: {{.Username}}</strong>
+</div>
+<div class="jumbotron">
+    <div class="container">
+        what would you like to do today {{.Fname}} {{.Lname}}?
+        <br>
+        Go to the <a href="/test/test">Test</a> Page
+    </div>
+</div>
+<form action="/logout" method="post">
+    <button class="btn btn-warning" type="submit">Logout</button>
+</form>
+{{template "footer" .}}
+{{end}}
