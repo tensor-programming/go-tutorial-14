@@ -134,6 +134,6 @@ func enyptPass(password string) string {
 }
 
 func Uuid() string {
-	id := uuid.NewV4()
+	id, _ := uuid.NewV4()
 	return id.String()
 }
